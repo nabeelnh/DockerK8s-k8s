@@ -1,0 +1,18 @@
+# Base image
+FROM node:14.14.0-alpine
+
+
+# Working directory
+WORKDIR '/app'
+
+
+# Application dependencies
+COPY package.json ./
+
+RUN npm install
+
+COPY ./ ./
+
+
+# Bootup when starting command
+CMD [ "npm", "run", "dev" ]
