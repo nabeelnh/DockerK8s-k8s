@@ -32,7 +32,7 @@ before_install:
   # Set k8s compute zone 
   - gcloud config set compute/zone europe-west2-a
 
-  # Add the name of k8s cluster multi-cluster
+  # Add the name of k8s cluster aka multi-cluster
   - gcloud container clusters get-credentials multi-cluster
 
   # Login into docker
