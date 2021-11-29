@@ -1,5 +1,5 @@
 sudo: required
-service:
+services:
   - docker
 env:
   global:
@@ -29,7 +29,7 @@ before_install:
   # Select a working GCP project
   - gcloud config set project multi-k8s-nh
 
-  # Set k8s compute zone 
+  # Set k8s compute zone
   - gcloud config set compute/zone europe-west2-a
 
   # Add the name of k8s cluster aka multi-cluster
